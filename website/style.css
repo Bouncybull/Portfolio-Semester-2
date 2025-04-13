@@ -1,0 +1,84 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@font-face {
+    font-family: NESfont;
+    src: url("./fonts/super-mario-bros-nes.otf");
+}
+
+.ctr {
+    background: linear-gradient(to top, #000000, #000000, #333333, #333333);
+    background-size: cover;
+    background-size: 100% 4px;
+
+    filter: blur(.5px);
+}
+
+@media screen {
+    .crt {
+        animation: scanlines infinite 55s linear ;
+    }
+}
+     
+@keyframes scanlines {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -10px;
+    }
+}
+
+
+#Title_screen {
+    height: 100vh;
+    width: 100vw;
+
+    font-family: NESfont;
+    font-size: 2vh;
+    color: white;
+
+    /* flex stuff */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#Title_screen img {
+    height: 136px;
+    width: 264px;
+}
+
+.oldman {
+    height: 136px;
+    width: 128px;
+    overflow: hidden;
+}
+
+/*.character_spritesheet {
+    animation: moveSpritesheet 1s steps(2) infinite;
+}
+
+@keyframes moveSpritesheet {
+    from {
+        transform: translate3d(0px,0,0)
+    }
+    to {
+        transform: translate3d(-100%,0,0);
+    }
+} */
+
+.logo p:nth-child(1)
+{
+    font-size: 6vh;
+}
+
+.logo p:nth-child(2)
+{
+    font-size: 4vh;
+}
