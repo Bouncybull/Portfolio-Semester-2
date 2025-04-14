@@ -3,20 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio Semester 2</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="ctr" id="Title_screen">
-        <div class="logo">
+        <div id="Dialogue_box"></div>
+        <div class="logo start_screen">
             <p>Portfolio</p>
             <p>Vince Schoutrop</p>
         </div>
-        <div class="oldman">
-            <img class="character_spritesheet" src="NES - The Legend of Zelda - NPCs.svg" alt="">
+        <div class="spritebox">
+            <div class="sprite">
+                <img class="character_spritesheet" src="NES - The Legend of Zelda - FIRE.svg" alt="">
+            </div>
+            <div class="sprite">
+                <img src="NES - The Legend of Zelda - NPCs.svg" alt="">
+            </div>
+            <div class="sprite">
+                <img class="character_spritesheet" src="NES - The Legend of Zelda - FIRE.svg" alt="">
+            </div>
         </div>
-        <p>click to continue</p>
+        <p class="blink start_screen">click to continue</p>
+        <div>
+            <canvas id="Book" width="8" height="16"></canvas>
+        </div>
     </div>
 </body>
-<script src="script.js"></script>
+<script src="./script.js"></script>
 </html>
