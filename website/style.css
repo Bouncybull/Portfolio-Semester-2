@@ -5,16 +5,6 @@
     border: 0;
 }
 
-canvas {
-    position: absolute;
-    left: 25vw;
-    bottom: 25vh;
-
-    width: 80px;
-    height: 160px;
-    image-rendering: pixelated;
-}
-
 @font-face {
     font-family: NESfont;
     src: url("./fonts/super-mario-bros-nes.otf");
@@ -122,3 +112,27 @@ canvas {
     text-align: center;
 }
 
+#Choices {
+    position: absolute;
+    bottom: 15vh;
+    display: flex;
+    flex-direction: row;
+    visibility: hidden;
+}
+
+#Choices div {
+    text-align: center;
+}
+
+#Choices p {
+    padding-top: 2vh;
+}
+
+.item {
+    object-fit: contain;
+    image-rendering: pixelated;
+    height: 80px !important;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    cursor: pointer;
+}

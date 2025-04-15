@@ -1,4 +1,6 @@
 let titlescreen = document.getElementById("Title_screen");
+let choices = document.getElementById("Choices");
+
 let text_num = 0;
 
 titlescreen.addEventListener("click", nextDialogue);
@@ -22,25 +24,19 @@ async function nextDialogue() {
     }
 
     if(text_num < dialogue.dialogue.length)
-      {
-   
-        let text = document.getElementById("Dialogue_box");
-        text.textContent = dialogue.dialogue[text_num];
-    
-        text_num++;
-      }
+    {
+  
+      let text = document.getElementById("Dialogue_box");
+      text.textContent = dialogue.dialogue[text_num];
+  
+      text_num++;
+    }
+
+    if(text_num == dialogue.dialogue.length)
+    {
+      choices.style.visibility = "initial";
+    }
   } catch (error) {
     console.error(error.message);
   }
 }
-
-// Get canvas context
-const ctx = document.getElementById("Book").getContext("2d");
-
-// Load image
-const image = new Image();
-image.onload = () => {
-  // Draw the image into the canvas
-  ctx.drawImage(image, 0, 0);
-};
-image.src = "NES - The Legend of Zelda - Book.png";
