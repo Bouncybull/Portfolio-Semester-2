@@ -16,7 +16,7 @@
     background-size: 100% 4px;
 
     filter: blur(.5px);
-    animation: scanlines infinite 55s linear ;
+    animation: scanlines infinite 1s linear ;
 }
      
 @keyframes scanlines {

@@ -11,7 +11,7 @@
     background-size: 100% 4px;
 
     filter: blur(.5px);
-    animation: scanlines infinite 55s linear ;
+    animation: scanlines infinite 1s linear ;
 }
      
 @keyframes scanlines {
@@ -39,6 +39,7 @@
 }
 
 .nes{
+    position: relative;
     height: 896px;
     width: 1016px;
     overflow: hidden;
@@ -46,7 +47,29 @@
     image-rendering: pixelated;
 }
 
-.nes img {
-    background-color: #000000;
-    opacity: 80%;
+.background {
+    animation: moveSpritesheet 1.5s steps(4) infinite;
+}
+
+#Mario {
+    position: absolute;
+    top: 252px;
+    left: 188px;
+    height: 72px;
+    width: 64px;
+    overflow: hidden;
+    image-rendering: pixelated;
+}
+
+.sprite {
+    animation: moveSpritesheet 1s steps(2) infinite;
+}
+
+@keyframes moveSpritesheet {
+    from {
+        transform: translate3d(0px,0,0)
+    }
+    to {
+        transform: translate3d(-100%,0,0);
+    }
 }
