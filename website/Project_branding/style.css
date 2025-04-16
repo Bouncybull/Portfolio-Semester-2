@@ -37,3 +37,16 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+.nes{
+    height: 896px;
+    width: 1016px;
+    overflow: hidden;
+
+    image-rendering: pixelated;
+}
+
+.nes img {
+    background-color: #000000;
+    opacity: 80%;
+}
