@@ -1,5 +1,9 @@
 {
     "dialogue": [
-        "Hello this is the portfolio of Vince Schoutrop for semester 2", "It's dangerous to go alone, take one of these!"
+        "Hello this is the portfolio of Vince Schoutrop for semester 2",
+        "In here the projects and learning outcomes of semester 2 will be shown.",
+        "You can always change to a different project by pressing enter.",
+        "But before you go...",
+        "It's dangerous to go alone, take one of these!"
     ]
 }
