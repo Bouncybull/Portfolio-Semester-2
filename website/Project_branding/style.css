@@ -51,18 +51,72 @@
     animation: moveSpritesheet 1.5s steps(4) infinite;
 }
 
-#Mario {
+#Mario  {
+    position: absolute;
+    top: 252px;
+    left: 0px;
+    height: 72px;
+    width: 64px;
+    overflow: hidden;
+    image-rendering: pixelated;
+    visibility: hidden;
+    z-index: 1;
+}
+
+#POS1 {
     position: absolute;
     top: 252px;
     left: 188px;
     height: 72px;
     width: 64px;
-    overflow: hidden;
-    image-rendering: pixelated;
+    background-color: red;
+}
+
+#POS2 {
+    position: absolute;
+    top: 124px;
+    left: 188px;
+    height: 72px;
+    width: 64px;
+    background-color: pink;
+}
+
+#POS3 {
+    position: absolute;
+    top: 252px;
+    left: 443px;
+    height: 72px;
+    width: 64px;
+    background-color: purple;
+}
+
+#POS4 {
+    position: absolute;
+    top: 442px;
+    left: 316px;
+    height: 72px;
+    width: 64px;
+    background-color: orange;
+}
+
+.position1 {
+    animation: changePosition0-1 1s linear forwards;
+}
+
+.position2{
+    animation: changePosition1-2 0.5s linear forwards;
+}
+
+.position3{
+    animation: changePosition2-3 2s linear forwards;
+}
+
+.position4{
+    animation: changePosition3-4 2s linear forwards;
 }
 
 .sprite {
-    animation: moveSpritesheet 1s steps(2) infinite;
+    animation: moveSpritesheet 0.5s steps(2) infinite;
 }
 
 @keyframes moveSpritesheet {
@@ -71,5 +125,77 @@
     }
     to {
         transform: translate3d(-100%,0,0);
+    }
+}
+
+@keyframes changePosition0-1 {
+    10% {
+        visibility: initial;
+        transform: translateX(28px);
+    }
+    100% {
+        visibility: initial;
+        transform:translateX(188px);
+    }
+}
+
+@keyframes changePosition1-2 {
+    0% {
+        visibility: initial;
+        transform:translateX(188px);
+    }
+    100% {
+        visibility: initial;
+        transform:translate(188px ,-128px); 
+    }
+}
+
+@keyframes changePosition2-3 {
+    0% {
+        visibility: initial;
+        transform:translate(188px ,-128px); 
+    }
+    33% {
+        visibility: initial;
+        transform:translate(316px ,-128px); 
+    }
+    66% {
+        visibility: initial;
+        transform:translateX(316px); 
+    }
+    100% {
+        visibility: initial;
+        transform:translateX(443px);
+    }
+}
+
+@keyframes changePosition3-4 {
+    0% {
+        visibility: initial;
+        transform:translateX(443px);
+    }
+    16% {
+        visibility: initial;
+        transform:translateX(512px);
+    }
+    33% {
+        visibility: initial;
+        transform:translate(512px, -128px);
+    }
+    50% {
+        visibility: hidden;
+        transform:translate(636px, -128px);
+    }
+    66% {
+        visibility: hidden;
+        transform:translate(124px, 323px);
+    }
+    83%{
+        visibility: initial;
+        transform:translate(316px, 323px);
+    }
+    100% {
+        visibility: initial;
+        transform:translate(316px, 190px);
     }
 }
