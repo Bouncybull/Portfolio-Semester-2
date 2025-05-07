@@ -11,7 +11,7 @@
     background-size: 100% 4px;
 
     filter: blur(.5px);
-    animation: scanlines infinite 5s linear ;
+    animation: scanlines infinite 5s linear;
 }
      
 @keyframes scanlines {
@@ -51,6 +51,21 @@
     animation: moveSpritesheet 1.5s steps(4) infinite;
 }
 
+.chapter {
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    background-color: #9cfcf0;
+    height: 75%;
+    width: 75%;
+    border-style: solid;
+    border-width: 25px;
+    border-color: #000000;
+    z-index: 2;
+    visibility: hidden;
+    overflow: scroll;
+}
+
 #Mario  {
     position: absolute;
     top: 252px;
@@ -69,7 +84,6 @@
     left: 188px;
     height: 72px;
     width: 64px;
-    background-color: red;
 }
 
 #POS2 {
@@ -78,7 +92,6 @@
     left: 188px;
     height: 72px;
     width: 64px;
-    background-color: pink;
 }
 
 #POS3 {
@@ -87,7 +100,6 @@
     left: 443px;
     height: 72px;
     width: 64px;
-    background-color: purple;
 }
 
 #POS4 {
@@ -96,7 +108,14 @@
     left: 316px;
     height: 72px;
     width: 64px;
-    background-color: orange;
+}
+
+#POS5 {
+    position: absolute;
+    top: 504px;
+    left: 636px;
+    height: 72px;
+    width: 64px;
 }
 
 .position1 {
@@ -113,6 +132,10 @@
 
 .position4{
     animation: changePosition3-4 2s linear forwards;
+}
+
+.position5{
+    animation: changePosition4-5 2s linear forwards;
 }
 
 .sprite {
@@ -197,5 +220,24 @@
     100% {
         visibility: initial;
         transform:translate(316px, 190px);
+    }
+}
+
+@keyframes changePosition4-5 {
+    0% {
+        visibility: initial;
+        transform:translate(316px, 190px);
+    }
+    50% {
+        visibility: initial;
+        transform:translate(580px, 190px);
+    }
+    83%{
+        visibility: initial;
+        transform:translate(580px, 254px);
+    }
+    100% {
+        visibility: initial;
+        transform:translate(636px, 254px);
     }
 }
